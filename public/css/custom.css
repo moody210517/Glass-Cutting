@@ -1,0 +1,43 @@
+html{
+    font-size: 18px;
+}
+.card-title {
+    font-family: "Times New Roman", Arial, SansSerif, "Helvetica Neue";
+    color: red;
+}
+.form-control {
+    border-color: #3c3c3c;
+    color: black;
+}
+@keyframes spin {
+    0% {
+        transform: rotate(0deg)
+    }
+    100% {
+        transform: rotate(360deg)
+    }
+}
+.spinner-container{
+    background-color: rgba(255,255,255,.5);
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    display: none;
+    z-index: 20000;
+}
+.spinner{
+    border: solid 10px #afafaf;
+    border-top-color: #0975e4;
+    border-radius: 50%!important;
+    position: absolute;
+    left: calc(50% - 50px);
+    top: calc(50% - 50px);
+    width: 100px;
+    height: 100px;
+    animation: spin 3s linear infinite;
+    -moz-animation: spin 3s linear infinite;
+    -webkit-animation: spin 3s linear infinite;
+    -o-animation: spin 3s linear infinite;
+}
