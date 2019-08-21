@@ -1,72 +1,49 @@
-<p align="center"><img src="https://laravel.com/assets/img/components/logo-laravel.svg"></p>
+The Glass Barron 
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/d/total.svg" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/v/stable.svg" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
-</p>
+# for database. 
+use w30glass_order.sql file in root folder. 
+This project was completed successfully.
 
-## About Laravel
+The structure of the business should allow for 1 cutting station for at most 8 outlets 
+Outlets 
+The worker at each outlet should have a password to log onto a GUI screen 
+They should then have the option to modify orders or make a new order 
+New Order screen 
+On the GUI screen the worker should be able to enter the following information 
+•	Name of customer 
+•	Physical address 
+•	Id number 
+•	Cell number 
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+The program should then ask for the following details 
+•	Dimensions of the ordered glass
+•	Type of glass 
+•	Thickness of glass
+•	Special cutting requirements 
+•	Hardening (yes/no)
+•	Polishing (yes/no) 
+•	Edge specifications
+•	Quantity
+This information should then be added to a basket and the categories should be cleared to allow the customer to ad a new item to the basket to allow for multiple items 
+The bottom of the page should provide a “provide a quote option”
+When the “Provide a quote” option is selected the program 
+•	Calculate the delivery fee by using Goolgle Maps to calculate the distance between the business and the residents and add a fee to the quote per km away from the depo with a minimum of R30
+•	Save all the clients particulars to a database so that if a quote is not initially accepted it can be saved till a later date or if the client later wants to add to the order this should be possible 
+When the ‘’Accept quote” option is selected 
+An invoice containing all the required items as well as the price must be created and saved to the completed orders database 
+The order should be transferred to a computer at the cutting depo where there is a fail safe that the workers  need to acknowledge that the order has been received and is being taken care of 
+The Modify orders screen 
+The worker should be able to enter a previous clients Name 
+This should allow them to access previously made quotes but not yet paid for ones so they can be modified or paid and put through 
+It should also allow them to see past orders that were paid for by the particular client so that the same order can be copied 
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+At the cutting Depo 
+the cutting depo should receive the confirmed for and paid for orders and an alarm should go of when a new order is received that switches off once they acknowledge that they have received it 
+the workers should also be able to see a list of the received orders so that if the printer is faulty they are able to reprint the order 
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
 
-## Learning Laravel
-
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
-
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1400 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
-
-## Laravel Sponsors
-
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
-
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[British Software Development](https://www.britishsoftware.co)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- [UserInsights](https://userinsights.com)
-- [Fragrantica](https://www.fragrantica.com)
-- [SOFTonSOFA](https://softonsofa.com/)
-- [User10](https://user10.com)
-- [Soumettre.fr](https://soumettre.fr/)
-- [CodeBrisk](https://codebrisk.com)
-- [1Forge](https://1forge.com)
-- [TECPRESSO](https://tecpresso.co.jp/)
-- [Runtime Converter](http://runtimeconverter.com/)
-- [WebL'Agence](https://weblagence.com/)
-- [Invoice Ninja](https://www.invoiceninja.com)
-- [iMi digital](https://www.imi-digital.de/)
-- [Earthlink](https://www.earthlink.ro/)
-- [Steadfast Collective](https://steadfastcollective.com/)
-- [We Are The Robots Inc.](https://watr.mx/)
-- [Understand.io](https://www.understand.io/)
-- [Abdel Elrafa](https://abdelelrafa.com)
-- [Hyper Host](https://hyper.host)
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-source software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+Managerial side
+The manager should have he’s own log on screen with a password 
+The manager should be able to enter the type and the dimensions of all the glass ordered and received 
+The program should then keep track of all the different glass stocks available as the area of the new orders of each type of glass is subtracted from the ordered glass 
+The manager should also be able to see a running total of the total sales as well as total cost 
